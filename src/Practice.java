@@ -49,7 +49,7 @@ public class Practice {
                 //lexicographical check using <0 does current word preceed the compared word (shortest)
                 boolean sameLength = !firstWord && word.length() == shortest.length() && word.compareTo(shortest) < 0;
 
-                if (firstWord || nextWord ){
+                if (firstWord || nextWord || sameLength ){
                     shortest = word;
                 }
         }
