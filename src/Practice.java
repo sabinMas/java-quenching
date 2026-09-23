@@ -39,7 +39,21 @@ public class Practice {
      * @throws NullPointerException if words is null
      */
     public static String shortestWord(Set<String> words) {
-        return null;
+        if (words.isEmpty()){
+            throw new IllegalArgumentException("words cannot be empty");}
+            String shortest = null;
+            for (String word:words) {
+                //store each value in a boolean and then compare to the next words
+                boolean firstWord = shortest == null;
+                boolean nextWord = !firstWord && word.length() < shortest.length();
+                //lexicographical check using <0 does current word preceed the compared word (shortest)
+                boolean sameLength = !firstWord && word.length() == shortest.length() && word.compareTo(shortest) < 0;
+
+                if (firstWord || nextWord ){
+                    shortest = word;
+                }
+        }
+        return shortest;
     }
 
     /**
