@@ -12,7 +12,17 @@ public class Practice {
      * @return the sum of the odd numbers in the array
      */
     public static int oddSum(int[] nums) {
+        if (nums == null)
         return 0;
+    }
+    int sum = 0;
+
+    // if divided by 2 has remainder which is not 0 then we run the code
+    // aka ODD numbers
+    for(int num:nums){
+        if(num %2 != 0) {
+            sum += num;
+        }
     }
 
     /**
