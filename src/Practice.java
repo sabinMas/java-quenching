@@ -1,6 +1,8 @@
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.HashSet;
+import java.util.HashMap;
 
 public class Practice {
     /**
@@ -88,7 +90,7 @@ public class Practice {
      */
     public static int biggestNumber(ListNode<Integer> head) {
         if (head == null) {
-            throw new IllegalArgumentException("head shouldn't be null")
+            throw new IllegalArgumentException("head shouldn't be null");
 
         }
         int biggest = head.data;
