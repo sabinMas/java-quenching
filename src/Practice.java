@@ -117,7 +117,15 @@ public class Practice {
      * @return a frequency map of values in the list
      */
     public static <T> Map<T, Integer> frequencies(ListNode<T> head) {
-        return null;
+        Map<T, Integer> counts = new HashMap<>();
+        ListNode<T> current = head;
+
+        while(current != null){
+            T data = current.data;
+            counts.put(data, counts.getOrDefault(data, 0) + 1);
+            current = current.next;
+        }
+        return counts;
     }
 
 
